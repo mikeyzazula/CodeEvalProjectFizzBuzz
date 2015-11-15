@@ -37,7 +37,7 @@ def fizzbuzz(file):
 
            else:
                outList.append(x)
-       return print(outList)
+        print(outList)
    newfile.close()
 
 fizzbuzz(fbfile)
