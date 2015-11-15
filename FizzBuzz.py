@@ -2,7 +2,7 @@
 #Michael Zazula
 
 import sys
-fbfile = system.argsv[1 ]
+fbfile = sys.argv[1]
 
 def fizzbuzz(file):
    newfile = open(file, "r")
@@ -21,7 +21,7 @@ def fizzbuzz(file):
        # second divider
        dividers = int(line[1])
 
-       # how many times this will run
+       # how far this will count 
        count = int(line[2])
 
        for x in range(1, count + 1):
@@ -37,7 +37,7 @@ def fizzbuzz(file):
 
            else:
                outList.append(x)
-       return outList
+       return print(outList)
    newfile.close()
 
 fizzbuzz(fbfile)
