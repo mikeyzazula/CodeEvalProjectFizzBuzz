@@ -5,40 +5,42 @@ import sys
 fbfile = sys.argv[1]
 
 def fizzbuzz(file):
-   newfile = open(file, "r")
-   
+	newfile = open(file, "r")
 
-   for line in newfile:
-       
-       line = line.split()
 
-       if len(line)<= 1:
-       	break
-       # first divider
-       dividerf = int(line[0])
+	for line in newfile:
 
-       # second divider
-       dividers = int(line[1])
+		line = line.split()
 
-       # how far this will count 
-       count = int(line[2])
-       outstring = ""
-       for x in range(1, count):
+		if len(line)<= 1:
+			break
+		# first divider
+		dividerf = int(line[0])
 
-           if x % dividerf == 0 and x % dividers == 0:
-               outstring += ("FB ")
+		# second divider
+		dividers = int(line[1])
 
-           elif x % dividerf == 0:
-               outstring += ("F ")
+		# how far this will count
+		count = int(line[2])
+		outstring = ""
+		#For everything EXCEPT the last character we need a space
+		for x in range(1, count+1):
 
-           elif x % dividers == 0:
-               outstring += ("B ")
+			if x % dividerf == 0 and x % dividers == 0:
+				outstring += ("FB ")
 
-           else:
-               outstring += str(x) + " " 
-        
-       print(outstring)
-   newfile.close()
+			elif x % dividerf == 0:
+				outstring += ("F ")
+
+			elif x % dividers == 0:
+				outstring += ("B ")
+
+			else:
+				outstring += str(x) + " "
+			#To avoid trailing white space, for the last character we have to remove that last space
+		outstring = outstring[:-1]
+		print(outstring)
+	newfile.close()
 
 fizzbuzz(fbfile)
 
