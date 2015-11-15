@@ -2,14 +2,19 @@
 #Michael Zazula
 
 import sys
-
+fbfile = system.argsv[1 ]
 
 def fizzbuzz(file):
    newfile = open(file, "r")
    outList = []
 
    for line in newfile:
+       
        print(newfile)
+       line = line.split()
+
+       if len(line)<= 1:
+       	break
        # first divider
        dividerf = int(line[0])
 
@@ -35,6 +40,6 @@ def fizzbuzz(file):
        return outList
    newfile.close()
 
-fizzbuzz(sys.argv[1])
+fizzbuzz(fbfile)
 
 
