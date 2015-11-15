@@ -14,7 +14,7 @@ dividers = 5
 count = 10
 
 
-for x in range(1,count):
+for x in range(1,count+1):
 	
 	if x%dividerf == 0 and x%dividers == 0:
 		print ("FB")
@@ -26,5 +26,5 @@ for x in range(1,count):
 		print ("B")
 
 	else:
-		print (count)
+		print (x)
 		
