@@ -22,22 +22,22 @@ def fizzbuzz(file):
 
        # how far this will count 
        count = int(line[2])
-       outList = []
-       for x in range(1, count + 1):
+       outstring = ""
+       for x in range(1, count):
 
            if x % dividerf == 0 and x % dividers == 0:
-               outList.append("FB")
+               outstring += ("FB ")
 
            elif x % dividerf == 0:
-               outList.append("F")
+               outstring += ("F ")
 
            elif x % dividers == 0:
-               outList.append("B")
+               outstring += ("B ")
 
            else:
-               outList.append(x)
+               outstring += str(x) + " " 
         
-       print(outList)
+       print(outstring)
    newfile.close()
 
 fizzbuzz(fbfile)
