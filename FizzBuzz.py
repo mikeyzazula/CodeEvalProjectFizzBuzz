@@ -16,15 +16,15 @@ count = 10
 
 for x in range(1,count):
 	
-	if x%dividerf == 0 && x%dividers == 0:
-		print "FB"
+	if x%dividerf == 0 and x%dividers == 0:
+		print 'FB'
 
 	elif x%dividerf == 0:
-		print "F"
+		print 'F'
 
 	elif x%dividers == 0:
-		print "B" 
+		print 'B'
 
 	else:
-		print "count"
+		print count
 		
