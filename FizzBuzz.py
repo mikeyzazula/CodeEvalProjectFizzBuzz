@@ -6,11 +6,10 @@ fbfile = sys.argv[1]
 
 def fizzbuzz(file):
    newfile = open(file, "r")
-   outList = []
+   
 
    for line in newfile:
        
-       print(newfile)
        line = line.split()
 
        if len(line)<= 1:
@@ -23,7 +22,7 @@ def fizzbuzz(file):
 
        # how far this will count 
        count = int(line[2])
-
+       outList = []
        for x in range(1, count + 1):
 
            if x % dividerf == 0 and x % dividers == 0:
@@ -37,7 +36,8 @@ def fizzbuzz(file):
 
            else:
                outList.append(x)
-        print(outList)
+        
+       print(outList)
    newfile.close()
 
 fizzbuzz(fbfile)
